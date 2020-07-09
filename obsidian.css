@@ -1,3 +1,28 @@
+/***************************************/
+/* search to navigte                   */
+/* search '_find' to return here       */
+/***************************************/
+/* _theme_variables                    */
+/* _mods:                              */
+/* ... _tag_pillbox                    */
+/* ... _wysiwyg_mode                   */
+/* ... _andy_matuschak_mode            */
+/* ... _stylish_blockquote             */
+/* ... _remove_embed_yaml              */
+/* ... _bullet_point_lines             */
+/***************************************/
+
+/* for more tweaks see: */
+/* https://forum.obsidian.md/t/meta-post-common-css-hacks/1978 */
+
+/***************************************/
+/* _theme_variables                    */
+/***************************************/
+
+/* _red_graphite_theme                 */
+/* source: https://github.com/seanwcom/Red-Graphite-for-Obsidian */
+/*-------------------------------------*/
+
 .theme-light
 {
   --background-inline-code: rgb(255, 255, 255);
@@ -17,7 +42,7 @@
   --text-faint: rgb(150, 150, 150);
   --text-header: rgb(44, 44, 44);
   --text-highlight-bg: #b4ff0066;
-  --text-inline-code: rgb(78, 78, 78);
+  --text-inline-code: rgb(203, 77, 73);
   --text-nav-selected: rgb(255, 255, 255);
   --text-nav: rgb(190, 190, 190);
   --text-normal: rgb(44, 44, 44);
@@ -60,34 +85,8 @@
 
 /* Changing size/color of the header hashtags ## */
 .cm-formatting-header {
-	color: var(--text-faint);
-  font-size: 0.6em;
+  color: var(--text-faint);
 }
-
-/* Headers in editor - hide the #'s */
-/* .cm-formatting-header-1, .cm-formatting-header-2, .cm-formatting-header-3, .cm-formatting-header-4, .cm-formatting-header-5, .cm-formatting-header-6, .cm-formatting-header-7 {
-  visibility: hidden; 
-  position: relative; 
-  width: 20px; 
-  display: inline-block;
-} */
-
-/* Headers in editor - show custom content - common */
-/* .cm-formatting-header-1:after, .cm-formatting-header-2:after, .cm-formatting-header-3:after, .cm-formatting-header-4:after, .cm-formatting-header-5:after, .cm-formatting-header-6:after, .cm-formatting-header-7:after {
-  visibility: visible;
-  position: absolute;
-  left: 0;
-  font-size: 12px;
-} */
-
-/* Headers in editor - show custom content - specifics */
-/* .cm-formatting-header-1:after { bottom:  2px; content: "H1"; }
-.cm-formatting-header-2:after { bottom:  0px; content: "H2"; }
-.cm-formatting-header-3:after { bottom:  0px; content: "H3"; }
-.cm-formatting-header-4:after { bottom: -1px; content: "H4"; }
-.cm-formatting-header-5:after { bottom: -1px; content: "H5"; }
-.cm-formatting-header-6:after { bottom: -1px; content: "H6"; }
-.cm-formatting-header-7:after { bottom: -1px; content: "H7"; } */
 
 .cm-s-obsidian span.cm-url {
   color: var(--text-accent);
@@ -95,40 +94,18 @@
 
 .markdown-preview-view mark {
   color: var(--text-normal);
-  padding: 0px 4px;
 }
 
 .cm-formatting-em.cm-em {
   color: var(--text-faint);
-  font-weight: 100;
-  font-size: 0.6em;
 }
 .cm-formatting-strong.cm-strong {
   color: var(--text-faint);
-  font-weight: 100;
-  font-size: 0.6em;
-}
-
-
-
-
-
-
-
-/* Wrap long nav text */
-.nav-file-title, .nav-folder-title {
-  white-space: normal;
-}
-
-/* Indent wrapped nav text */
-.nav-file-title-content {
-  margin-left: 10px;
-  text-indent: -10px;
 }
 
 /* Horizontal rule between Icons and vault in left nav */
 .nav-buttons-container {
-  border-bottom: 1px solid var(--background-nav-alt);
+  border-bottom-color: var(--background-nav-alt);
 }
 
 /* The name of the vault */
@@ -140,7 +117,6 @@
 .nav-file-title, .nav-folder-title {
   color: var(--text-nav);
 }
-
 
 /* New top tabs */
 .workspace-tabs {
@@ -185,15 +161,11 @@
 /* Set the left nav background to different color from ribbon, and give a curved corner with statusbar */
 .mod-left-split .workspace-tabs .workspace-leaf .workspace-leaf-content {
   background-color: var(--background-nav);
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
 }
 
 /* Set the right nav background to different color from ribbon, and give a curved corner with statusbar */
 .mod-right-split .workspace-tabs .workspace-leaf .workspace-leaf-content {
   background-color: var(--background-nav);
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .side-dock.mod-right {
@@ -287,19 +259,13 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
 
 /* Left side dock */
 .side-dock.mod-left {
-  border-right: 1px solid var(--background-secondary-border);
-}
-
-/* Font adjustments for pane headers */
-.view-header-title {
-  font-size: 16px;
-  font-weight: 600;
+  border-right-color: var(--background-secondary-border);
 }
 
 /* Status bar ... duh? :) */
 .status-bar {
   background-color: var(--background-nav-alt);
-  border-top: 0px solid var(--background-nav-alt);
+  border-top-color: var(--background-nav-alt);
   color: var(--text-nav);
 }
 
@@ -321,40 +287,9 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
   color: var(--text-accent);
 }
 
-
-/* Font for the markdown source panel */
-div.markdown-source-view {
-	font-family: var(--font-family-editor);
-}
-
-/* Font for the markdown preview panel */
-div.markdown-preview-view {
-	font-family: var(--font-family-preview);
-}
-
-/* Coloring the list bullets/numbers */
-.cm-s-obsidian span.cm-formatting-list {
-	color: var(--text-accent);
-  font-size: 0.85em;
-  font-weight: 500;
-  font-family: var(--font-monospace);
-}
-
 /* Editor view - task list, color and veritcal align */
 .cm-s-obsidian span.cm-formatting-task {
   color: var(--text-accent);
-  font-size: 0.85em;
-  font-weight: 500;
-  position: relative;
-  top: -0.12em;
-}
-
-/* Preview Checkboxes don't seem to align correctly */
-.markdown-preview-view .task-list-item-checkbox {
-  width: 15px;
-  height: 15px;
-  /* position: relative; */
-  /* top: 3px; */
 }
 
 .CodeMirror .cm-math {
@@ -362,8 +297,9 @@ div.markdown-preview-view {
 }
 
 /* color of inline code ticks */
+/* modified by loikein */
 .cm-s-obsidian span.cm-inline-code.cm-formatting-code {
-  color: var(--text-faint);
+  color: var(--text-inline-code);
 }
 
 /* color of inline code */
@@ -374,44 +310,34 @@ div.markdown-preview-view {
 /* color and border of inline code (between the ticks) */
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code) {
   background-color: var(--background-inline-code);
-  border: 1px solid var(--border-inline-code);
-  padding: 1px 2px;
+  border-color: var(--border-inline-code);
 }
 
 .markdown-preview-section code {
   background-color: var(--background-inline-code);
-  border: 1px solid var(--border-inline-code);
-  padding: 1px 4px;
+  border-color: var(--border-inline-code);
 }
 
 /* Set background of code panes to transparent since main background is controlled above */
 .markdown-preview-view code {
   background-color: transparent;
-  bottom: 0px;
   color: var(--text-inline-code);
 }
 
 /* Preview code block background */
 .markdown-preview-view pre {
-  padding: 1em;
   background-color: var(--code-block-background);
-  border-radius: 4px;
-  border: 1px solid var(--code-block-border);
-  white-space: pre-wrap;
+  border-color: var(--code-block-border);
 }
 
 /* Code block border color */
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
-	border-top: 1px solid var(--code-block-border);
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
+  border-top-color: var(--code-block-border);
 }
 
 /* Code block border color */
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
-	border-bottom: 1px solid var(--code-block-border);
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
+  border-bottom: 1px solid var(--code-block-border);
 }
 
 /* Code block background color */
@@ -421,37 +347,20 @@ div.markdown-preview-view {
 
 /* Code block left and right padding */
 .cm-s-obsidian pre.HyperMD-codeblock {
-  padding: 0px 10px 0px 10px;
   color: var(--text-inline-code);
-}
-
-/* Code block top padding */
-.cm-s-obsidian pre.HyperMD-codeblock-begin {
-	padding-top: 10px;
-}
-
-/* Code block bottom padding */
-.cm-s-obsidian pre.HyperMD-codeblock-end {
-	padding-top: 10px;
 }
 
 /* Code block left and right border colors */
 .cm-s-obsidian div.HyperMD-codeblock-bg {
-	border-left: 1px solid var(--code-block-border);
-	border-right: 1px solid var(--code-block-border);
+  border-left-color: var(--code-block-border);
+  border-right-color: var(--code-block-border);
 }
 
 /* Enable wrapping of code blocks in the preview panel */
 .theme-light code[class*="language-"], .theme-light pre[class*="language-"],
 .theme-dark code[class*="language-"], .theme-dark pre[class*="language-"] {
-  white-space: pre-wrap;
   background-color: var(--code-block-background);
 }
-
-/* Add some spacing when a #hashtag is used */
-/* .cm-hashtag, .markdown-preview-section .tag {
-  line-height: 1.9em;
-} */
 
 /* Tag pillbox - common settings for editor left, editor right and preview */
 .cm-s-obsidian span.cm-hashtag-begin, 
@@ -459,48 +368,13 @@ div.markdown-preview-view {
 a.tag {
   background-color: var(--background-tag);
   color: var(--text-nav-selected);
-  padding-bottom: 2px;
-  padding-top: 2px;
-	text-decoration: none;
-  font-family: var(--font-family-editor);
-  font-size: 0.9em;
 }
 
-/* Tag editor left side pillbox */
-.cm-s-obsidian span.cm-hashtag-begin {
-	border-top-left-radius: 25px;
-	border-bottom-left-radius: 25px;
-	padding-left: 8px;
-}
+/* Right nav tag colour */
+/* modified by loikein */
 
-/* Tag editor right side pillbox */
-.cm-s-obsidian span.cm-hashtag-end {
-	border-top-right-radius: 25px;
-	border-bottom-right-radius: 25px;
-	padding-right: 10px;
-}
-
-/* Tag preview pillbox */
-a.tag {
-	border-top-left-radius: 250px;
-	border-top-right-radius: 250px;
-	border-bottom-left-radius: 250px;
-	border-bottom-right-radius: 250px;
-	padding-left: 10px;
-	padding-right: 12px;
-}
-
-/* Add a tiny bit of padding to the link brackets and parenthesis */
-.cm-s-obsidian span.cm-formatting-link,
-.cm-s-obsidian span.cm-formatting-link-string {
-  padding: 0 1px 0 1px;
-  /* font-weight: 500; */
-}
-
-/* Additional left/right padding for tag pane so hover background has some room */
-.tag-pane-tags {
-  padding-left: 10px;
-  padding-right: 5px;
+.tag-pane-tag {
+  color: var(--text-nav);
 }
 
 /* Color the hover background like we do the selected left nav */
@@ -513,6 +387,22 @@ a.tag {
 .tag-pane-tag-count {
   background-color: var(--text-accent);
   color: var(--text-nav-selected);
+}
+
+/* Backlinks big titles colour */
+/* modified by loikein */
+
+.side-dock-collapsible-section-header {
+  color: var(--text-muted);
+}
+
+.side-dock-collapsible-section-header:hover{
+  background-color: var(--background-nav-alt);
+  color: var(--text-nav-selected);
+}
+
+:not(.is-collapsed) > .side-dock-collapsible-section-header-indicator{
+  color: var(--interactive-accent);
 }
 
 /* Backlinks title match hover */
@@ -534,8 +424,6 @@ a.tag {
 .search-result-file-matched-text {
   color: var(--text-nav-selected);
   background-color: var(--text-accent);
-  padding: 2px;
-  border-radius: 4px;
 }
 
 /* Add button hovers to the the Update internal links modal (and possibly others) */
@@ -550,7 +438,6 @@ a.tag {
   cursor: text;
   border-color: var(--interactive-accent);
   background-color: var(--background-nav);
-  padding-left: 15px;
 }
 
 /* Background color of file tags, like "png" */
@@ -559,30 +446,453 @@ a.tag {
   color: var(--text-nav-selected);
 }
 
-/* Remove the border, padding, and margin for the transcludes/embeds */
-.markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
-  border: 0px;
-  padding: 0;
-  margin: 0;
+/* Card title adjustment for Andy Matuschak mode */
+/* modified by loikein */
+
+.workspace-leaf.mod-active .view-header {
+  border-color: var(--interactive-accent);
 }
 
-/* Hide the title of the embeds */
-.markdown-embed-title {
+/***************************************/
+/* _mods                               */
+/***************************************/
+
+/* _tag_pillbox                        */
+/* source: https://github.com/seanwcom/Red-Graphite-for-Obsidian */
+/*-------------------------------------*/
+
+/* Tag pillbox - common settings for editor left, editor right and preview */
+.cm-s-obsidian span.cm-hashtag-begin, 
+.cm-s-obsidian span.cm-hashtag-end,
+a.tag {
+  padding-bottom: 2px;
+  padding-top: 2px;
+  text-decoration: none;
+  font-family: var(--font-family-editor);
+  font-weight: bold;
+}
+
+/* Tag editor left side pillbox */
+.cm-s-obsidian span.cm-hashtag-begin {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding-left: 8px;
+}
+
+/* Tag editor right side pillbox */
+.cm-s-obsidian span.cm-hashtag-end {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding-right: 10px;
+}
+
+/* Tag preview pillbox */
+a.tag {
+  border-top-left-radius: 250px;
+  border-top-right-radius: 250px;
+  border-bottom-left-radius: 250px;
+  border-bottom-right-radius: 250px;
+  padding-left: 10px;
+  padding-right: 12px;
+}
+
+/* _wysiwyg_mode                       */
+/* source: https://github.com/deathau/psuedo-wysiwyg-obsidian-theme */
+/*-------------------------------------*/
+
+@charset "UTF-8";
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-link {
+  /* this is for the double square brackets on internal links */
   display: none;
 }
 
-.markdown-preview-view .markdown-embed-content {
-  max-height: unset;
-  overflow-y: unset;
-  padding-right: unset;
+/* Show code block formatting */
+/* modified by loikein */
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting:not(.cm-formatting-code-block), .CodeMirror-code > :not(.CodeMirror-activeline) .cm-comment, .CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-escape {
+  /* this gets most formatting */
+  display: none;
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting.cm-hashtag-begin {
+  /* I think we want to see hashes on tags */
+  display: inline;
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-link-string.cm-url + .cm-url {
+  /* external links are a bit dodgy at the moment */
+  /* you can't ctrl+click on a url you can't see... */
+  width: 14px;
+  height: 1em;
+  padding-left: 18px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-link-string.cm-url + .cm-url::before {
+  /* putting in the arrow icon from the default theme */
+  content: "";
+  background-color: var(--text-muted);
+  -webkit-mask-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyBjbGFzcz0naS1leHRlcm5hbCcgdmlld0JveD0nMCAwIDMyIDMyJyB3aWR0aD0nMTQnIGhlaWdodD0nMTQnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzg4ODg4OCcgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJyBzdHJva2UtbGluZWpvaW49J3JvdW5kJyBzdHJva2Utd2lkdGg9JzkuMzglJz48cGF0aCBkPSdNMTQgOSBMMyA5IDMgMjkgMjMgMjkgMjMgMTggTTE4IDQgTDI4IDQgMjggMTQgTTI4IDQgTDE0IDE4Jy8+PC9zdmc+DQo=");
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 4px;
+  bottom: 0;
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) pre.HyperMD-hr {
+  /* hide hr breaks */
+  visibility: hidden;
 }
 
+/* modified by loikein */
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-hr-bg {
+  /* but show hr as a line */
+  visibility: visible;
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: var(--background-modifier-border);
+  margin: auto;
+}
+.cm-s-obsidian pre.HyperMD-hr {
+  /* code mirror freaks out with lines that change size, so we have to make the
+    hrs take up more room, even when they're just text */
+  /* padding-bottom: 52px; */
+}
 
-/* 
-Try to support content in the navs... this is difficult because this theme is a 
-split of dark and light. So content in the main pane should be light mode, while content
-in the left pane should be dark mode
-*/
-/* .workspace-tabs .view-content {
-  color: var(--text-nav);
-} */
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line {
+  /* still have to work out ordered lists and checkbox lists... */
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-list-1::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-list-1::before {
+  /* 1st level ul bullet */
+  content: "•";
+  padding-right: 0.2em;
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-list-2::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-list-2::before {
+  /* 2nd level ul bullet */
+  content: "◦";
+  padding-right: 0.2em;
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-list-3::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-list-3::before {
+  /* 3rd level ul bullet */
+  content: "▪";
+  padding-right: 0.4em;
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-formatting-list-ol + span, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-formatting-list-ol + span {
+  margin-left: 1.5em;
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-formatting-list-ol + span::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-formatting-list-ol + span::before {
+  /* ol bullet */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.6em;
+  text-align: right;
+  direction: rtl;
+  overflow: visible;
+  white-space: nowrap;
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-1 .cm-formatting-list-ol + .cm-list-1::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-1 .cm-formatting-list-ol + .cm-list-1::before {
+  /* 1st level ul bullet */
+  content: "." counter(ol-1);
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-2 .cm-formatting-list-ol + .cm-list-2::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-2 .cm-formatting-list-ol + .cm-list-2::before {
+  /* 1st level ul bullet */
+  content: "." counter(ol-2);
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-3 .cm-formatting-list-ol + .cm-list-3::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-3 .cm-formatting-list-ol + .cm-list-3::before {
+  /* 1st level ul bullet */
+  content: "." counter(ol-3);
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-4 .cm-formatting-list-ol + .cm-list-4::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-4 .cm-formatting-list-ol + .cm-list-4::before {
+  /* 1st level ul bullet */
+  content: "." counter(ol-4);
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-5 .cm-formatting-list-ol + .cm-list-5::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-5 .cm-formatting-list-ol + .cm-list-5::before {
+  /* 1st level ul bullet */
+  content: "." counter(ol-5);
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-6 .cm-formatting-list-ol + .cm-list-6::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-6 .cm-formatting-list-ol + .cm-list-6::before {
+  /* 1st level ul bullet */
+  content: "." counter(ol-6);
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-7 .cm-formatting-list-ol + .cm-list-7::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-7 .cm-formatting-list-ol + .cm-list-7::before {
+  /* 1st level ul bullet */
+  content: "." counter(ol-7);
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-8 .cm-formatting-list-ol + .cm-list-8::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-8 .cm-formatting-list-ol + .cm-list-8::before {
+  /* 1st level ul bullet */
+  content: "." counter(ol-8);
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-9 .cm-formatting-list-ol + .cm-list-9::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-9 .cm-formatting-list-ol + .cm-list-9::before {
+  /* 1st level ul bullet */
+  content: "." counter(ol-9);
+}
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-10 .cm-formatting-list-ol + .cm-list-10::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-10 .cm-formatting-list-ol + .cm-list-10::before {
+  /* 1st level ul bullet */
+  content: "." counter(ol-10);
+}
+
+.CodeMirror-line:not(.HyperMD-list-line) {
+  counter-reset: ol-1;
+}
+
+.HyperMD-list-line-1 {
+  counter-reset: ol-2;
+}
+.HyperMD-list-line-1 .cm-formatting-list-ol + .cm-list-1 {
+  counter-increment: ol-1;
+}
+
+.HyperMD-list-line-2 {
+  counter-reset: ol-3;
+}
+.HyperMD-list-line-2 .cm-formatting-list-ol + .cm-list-2 {
+  counter-increment: ol-2;
+}
+
+.HyperMD-list-line-3 {
+  counter-reset: ol-4;
+}
+.HyperMD-list-line-3 .cm-formatting-list-ol + .cm-list-3 {
+  counter-increment: ol-3;
+}
+
+.HyperMD-list-line-4 {
+  counter-reset: ol-5;
+}
+.HyperMD-list-line-4 .cm-formatting-list-ol + .cm-list-4 {
+  counter-increment: ol-4;
+}
+
+.HyperMD-list-line-5 {
+  counter-reset: ol-6;
+}
+.HyperMD-list-line-5 .cm-formatting-list-ol + .cm-list-5 {
+  counter-increment: ol-5;
+}
+
+.HyperMD-list-line-6 {
+  counter-reset: ol-7;
+}
+.HyperMD-list-line-6 .cm-formatting-list-ol + .cm-list-6 {
+  counter-increment: ol-6;
+}
+
+.HyperMD-list-line-7 {
+  counter-reset: ol-8;
+}
+.HyperMD-list-line-7 .cm-formatting-list-ol + .cm-list-7 {
+  counter-increment: ol-7;
+}
+
+.HyperMD-list-line-8 {
+  counter-reset: ol-9;
+}
+.HyperMD-list-line-8 .cm-formatting-list-ol + .cm-list-8 {
+  counter-increment: ol-8;
+}
+
+.HyperMD-list-line-9 {
+  counter-reset: ol-10;
+}
+.HyperMD-list-line-9 .cm-formatting-list-ol + .cm-list-9 {
+  counter-increment: ol-9;
+}
+
+.HyperMD-list-line-10 {
+  counter-reset: ol-11;
+}
+.HyperMD-list-line-10 .cm-formatting-list-ol + .cm-list-10 {
+  counter-increment: ol-10;
+}
+
+/* Image indicator */
+/* modified by loikein */
+
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-image ~ .cm-url {
+  font-size: 1.5em;
+}
+
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-image ~ .cm-url::after {
+  content: "\01f5bc";
+  /* not possible: */
+  /* background: url(attr(href)); */
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.8em;
+}
+
+/* Blockquote left boarder */
+/* modified by loikein */
+
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-quote {
+  border-left: 5px solid var(--background-modifier-border);
+}
+
+/* _andy_matuschak_mode                */
+/* source: https://github.com/elliotboyd/obsidian-traffic-lights */
+/*-------------------------------------*/
+
+.mod-root.workspace-split.mod-vertical { 
+  overflow-x:auto; 
+  --header-width: 28px;
+}
+
+.mod-root .view-content {
+  height: 100%; 
+}
+
+.mod-root.workspace-split.mod-vertical > div { 
+  min-width: calc(100% + var(--header-width));
+  position:sticky;
+  left: 0;
+}
+
+.workspace-split.mod-vertical > .workspace-leaf {
+  padding-top: 0px;  
+}
+
+.workspace-split.mod-root .workspace-leaf-content[data-type='markdown'] {
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.75);
+  clip-path: inset(0px 0px 0px -15px);
+}
+
+.workspace-split.mod-horizontal .workspace-leaf {
+  padding-top: 0px;
+}
+
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-8) { left: calc(var(--header-width) * 0); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-7) { left: calc(var(--header-width) * 1); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-6) { left: calc(var(--header-width) * 2); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-5) { left: calc(var(--header-width) * 3); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-4) { left: calc(var(--header-width) * 4); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-3) { left: calc(var(--header-width) * 5); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-2) { left: calc(var(--header-width) * 6); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-1) { left: calc(var(--header-width) * 7); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n+0) { left: calc(var(--header-width) * 8); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n+1) { left: calc(var(--header-width) * 9); }
+
+/* Show the last note's title */
+/* modified by loikein */
+.mod-root.workspace-split.mod-vertical > div:last-child { padding-left: 28px; }
+
+.mod-root .workspace-leaf-content {
+  padding-left: var(--header-width);
+  padding-right: 10px;
+  position: relative;
+}
+
+.view-header {
+  writing-mode: vertical-lr;
+  border-top: none;
+  border-bottom: none;
+  height: auto;
+  width: var(--header-width);
+  position: absolute;
+  left:0;
+  top:0;
+  bottom:0;
+}
+
+/* modified by loikein */
+.workspace-leaf.mod-active .view-header {
+  border-bottom: none;
+  border-right-width: 2px;
+  border-right-style: solid;
+}
+
+.view-header-title-container {
+  height: unset;
+  padding-left: unset;
+  left: -1.5px;
+}
+
+/* modified by loikein */
+.view-header-title-container::after {
+  display: none;
+}
+
+.view-header-icon, .view-actions {
+  padding: 10px 0px;
+}
+.view-action {
+  margin: 8px 0px 0px 0px;
+}
+
+.view-content {
+  height: 100%;
+}
+
+.workspace-fake-target-overlay {
+  background-color: var(--background-primary);
+}
+
+/* _stylish_blockquote                 */
+/* source: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/39 */
+/*-------------------------------------*/
+
+/* Remove blockquote left margin */
+blockquote {
+  margin-inline-start: 0;
+}
+
+/* Add quotation character before quote */
+blockquote:before {
+  font: 14px/20px serif;
+  color: var(--background-modifier-border);
+  content: "“";
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+
+blockquote p { display: inline; }
+
+/* _remove_embed_yaml                  */
+/* source: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/41 */
+/*-------------------------------------*/
+
+/* Remove embed yaml first separator */
+.markdown-embed-content > hr:first-child { display: none; }
+/* Remove embed yaml content */
+.markdown-embed-content > hr:first-child + p { display: none; }
+/* Remove embed yaml second separator (if empty) */
+.markdown-embed-content > hr:first-child + hr { display: none; }
+/* Remove embed yaml second separator */
+.markdown-embed-content > hr:first-child + p + hr { display: none; }
+
+/* _bullet_point_lines                 */
+/* source: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/2 */
+/*-------------------------------------*/
+
+.cm-hmd-list-indent .cm-tab,
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  position: relative;
+}
+
+.cm-hmd-list-indent .cm-tab::before,
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+  content:'';
+  border-left: 1px solid var(--background-modifier-border);
+  position: absolute;
+}
+
+.cm-hmd-list-indent .cm-tab::before { left: 0; top: -5px; bottom: -4px; }
+
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+  left: -11px;
+  top: 0;
+  bottom: 0;
+} 
