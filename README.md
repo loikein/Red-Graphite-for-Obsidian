@@ -4,7 +4,7 @@
 
 ## Fork Notes
 
-This is a mesh-up (mainly for myself) of Red Graphite for Obsidian, [elliotboyd/obsidian-traffic-lights](https://github.com/elliotboyd/obsidian-traffic-lights) and various other tweaks from [Meta Post - Common CSS Hacks - Share & showcase - Obsidian Forum](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978). All credits are written in the code also.
+This is a mesh-up (mainly for myself) of Red Graphite for Obsidian, [elliotboyd/obsidian-traffic-lights](https://github.com/elliotboyd/obsidian-traffic-lights), [deathau/psuedo-wysiwyg-obsidian-theme](https://github.com/deathau/psuedo-wysiwyg-obsidian-theme) and various other tweaks from [Meta Post - Common CSS Hacks - Share & showcase - Obsidian Forum](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978). All credits are written in the code also.
 
 ## Manual Install
 
