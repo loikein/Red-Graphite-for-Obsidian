@@ -8,8 +8,9 @@
 /* ... _wysiwyg_mode                   */
 /* ... _andy_matuschak_mode            */
 /* ... _stylish_blockquote             */
-/* ... _remove_embed_yaml              */
 /* ... _bullet_point_lines             */
+/* ... _task_check_list_tweaks         */
+/* ... _muted_yaml                     */
 /***************************************/
 
 /* for more tweaks see: */
@@ -564,25 +565,32 @@ a.tag {
 .CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line {
   /* still have to work out ordered lists and checkbox lists... */
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-list-1::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-list-1::before {
+
+/* Modified by loikein */
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-list-1:not(.cm-hmd-internal-link)::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-list-1:not(.cm-hmd-internal-link)::before {
   /* 1st level ul bullet */
   content: "•";
   padding-right: 0.2em;
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-list-2::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-list-2::before {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-list-2::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-list-2::before {
   /* 2nd level ul bullet */
   content: "◦";
   padding-right: 0.2em;
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-list-3::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-list-3::before {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-list-3::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-list-3::before {
   /* 3rd level ul bullet */
   content: "▪";
   padding-right: 0.4em;
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-formatting-list-ol + span, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-formatting-list-ol + span {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-formatting-list-ol + span,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-formatting-list-ol + span {
   margin-left: 1.5em;
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-formatting-list-ol + span::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-formatting-list-ol + span::before {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-formatting-list-ol + span::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line .cm-formatting-list-ol + span::before {
   /* ol bullet */
   display: inline-block;
   width: 1em;
@@ -592,7 +600,8 @@ a.tag {
   overflow: visible;
   white-space: nowrap;
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-1 .cm-formatting-list-ol + .cm-list-1::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-1 .cm-formatting-list-ol + .cm-list-1::before {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-1 .cm-formatting-list-ol + .cm-list-1::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-1 .cm-formatting-list-ol + .cm-list-1::before {
   /* 1st level ul bullet */
   content: "." counter(ol-1);
 }
@@ -600,35 +609,43 @@ a.tag {
   /* 1st level ul bullet */
   content: "." counter(ol-2);
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-3 .cm-formatting-list-ol + .cm-list-3::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-3 .cm-formatting-list-ol + .cm-list-3::before {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-3 .cm-formatting-list-ol + .cm-list-3::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-3 .cm-formatting-list-ol + .cm-list-3::before {
   /* 1st level ul bullet */
   content: "." counter(ol-3);
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-4 .cm-formatting-list-ol + .cm-list-4::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-4 .cm-formatting-list-ol + .cm-list-4::before {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-4 .cm-formatting-list-ol + .cm-list-4::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-4 .cm-formatting-list-ol + .cm-list-4::before {
   /* 1st level ul bullet */
   content: "." counter(ol-4);
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-5 .cm-formatting-list-ol + .cm-list-5::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-5 .cm-formatting-list-ol + .cm-list-5::before {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-5 .cm-formatting-list-ol + .cm-list-5::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-5 .cm-formatting-list-ol + .cm-list-5::before {
   /* 1st level ul bullet */
   content: "." counter(ol-5);
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-6 .cm-formatting-list-ol + .cm-list-6::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-6 .cm-formatting-list-ol + .cm-list-6::before {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-6 .cm-formatting-list-ol + .cm-list-6::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-6 .cm-formatting-list-ol + .cm-list-6::before {
   /* 1st level ul bullet */
   content: "." counter(ol-6);
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-7 .cm-formatting-list-ol + .cm-list-7::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-7 .cm-formatting-list-ol + .cm-list-7::before {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-7 .cm-formatting-list-ol + .cm-list-7::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-7 .cm-formatting-list-ol + .cm-list-7::before {
   /* 1st level ul bullet */
   content: "." counter(ol-7);
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-8 .cm-formatting-list-ol + .cm-list-8::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-8 .cm-formatting-list-ol + .cm-list-8::before {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-8 .cm-formatting-list-ol + .cm-list-8::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-8 .cm-formatting-list-ol + .cm-list-8::before {
   /* 1st level ul bullet */
   content: "." counter(ol-8);
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-9 .cm-formatting-list-ol + .cm-list-9::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-9 .cm-formatting-list-ol + .cm-list-9::before {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-9 .cm-formatting-list-ol + .cm-list-9::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-9 .cm-formatting-list-ol + .cm-list-9::before {
   /* 1st level ul bullet */
   content: "." counter(ol-9);
 }
-.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-10 .cm-formatting-list-ol + .cm-list-10::before, .CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-10 .cm-formatting-list-ol + .cm-list-10::before {
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line-10 .cm-formatting-list-ol + .cm-list-10::before,
+.CodeMirror-code > :not(.CodeMirror-activeline).HyperMD-list-line-10 .cm-formatting-list-ol + .cm-list-10::before {
   /* 1st level ul bullet */
   content: "." counter(ol-10);
 }
@@ -851,19 +868,6 @@ blockquote:before {
 
 blockquote p { display: inline; }
 
-/* _remove_embed_yaml                  */
-/* source: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/41 */
-/*-------------------------------------*/
-
-/* Remove embed yaml first separator */
-.markdown-embed-content > hr:first-child { display: none; }
-/* Remove embed yaml content */
-.markdown-embed-content > hr:first-child + p { display: none; }
-/* Remove embed yaml second separator (if empty) */
-.markdown-embed-content > hr:first-child + hr { display: none; }
-/* Remove embed yaml second separator */
-.markdown-embed-content > hr:first-child + p + hr { display: none; }
-
 /* _bullet_point_lines                 */
 /* source: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/2 */
 /*-------------------------------------*/
@@ -895,4 +899,24 @@ ol ol::before {
   left: -11px;
   top: 0;
   bottom: 0;
-} 
+}
+
+/* _task_check_list_tweaks             */
+/*-------------------------------------*/
+
+/* Vertical alignment in preview */
+input[type=checkbox] {
+    vertical-align: top;
+}
+
+/* Show checkbox in editor */
+.CodeMirror-code > :not(.CodeMirror-activeline) .HyperMD-list-line .cm-formatting-task + .cm-list-1::before {
+  content: "\02611";
+}
+
+/* _muted_yaml                         */
+/*-------------------------------------*/
+
+.cm-hmd-frontmatter {
+  color: var(--text-muted);
+}
