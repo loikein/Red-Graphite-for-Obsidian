@@ -121,6 +121,11 @@
   color: var(--text-nav);
 }
 
+/* modified by loikein */
+.nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-collapse-indicator {
+  color: var(--interactive-accent);
+}
+
 /* New top tabs */
 .workspace-tabs {
   background-color: var(--background-nav-alt);
@@ -337,29 +342,41 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
 }
 
 /* Code block border color */
+/* modified by loikein */
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
-  border-top-color: var(--code-block-border);
+  border: none;
+  background-color: var(--background-primary) !important;
+  /* border-bottom: 1px solid var(--code-block-border); */
 }
+.cm-s-obsidian pre.HyperMD-codeblock-begin{ color: var(--text-muted) !important; }
 
 /* Code block border color */
+/* modified by loikein */
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
-  border-bottom: 1px solid var(--code-block-border);
+  border: none;
+  background-color: var(--background-primary) !important;
+  /* border-top: 1px solid var(--code-block-border); */
 }
+.cm-s-obsidian pre.HyperMD-codeblock-end{ color: var(--text-muted) !important; }
 
 /* Code block background color */
+/* modified by loikein */
 .cm-s-obsidian div.HyperMD-codeblock-bg {
   background-color: var(--code-block-background);
+  border: none;
 }
 
 /* Code block left and right padding */
+/* modified by loikein */
 .cm-s-obsidian pre.HyperMD-codeblock {
   color: var(--text-inline-code);
+  line-height: 1.5;
 }
 
 /* Code block left and right border colors */
 .cm-s-obsidian div.HyperMD-codeblock-bg {
-  border-left-color: var(--code-block-border);
-  border-right-color: var(--code-block-border);
+/*   border-left-color: var(--code-block-border);
+  border-right-color: var(--code-block-border); */
 }
 
 /* Enable wrapping of code blocks in the preview panel */
