@@ -12,6 +12,7 @@
 /* ... _task_check_list_tweaks         */
 /* ... _muted_yaml                     */
 /* ... _muted_toc                      */
+/* ... _modify_outline                 */
 /***************************************/
 
 /* for more tweaks see: */
@@ -146,12 +147,15 @@
 }
 
 /* Background color of selected tab */
-.workspace-tab-header.is-active {
+/* modified by loikein */
+.workspace-tab-header.is-active,
+.workspace-tab-header.is-active:hover {
   background-color: var(--background-nav);
+  color: var(--text-nav);
 }
 
 /* resize handle coloring */
-.workspace-leaf-resize-handle {;
+.workspace-leaf-resize-handle {
   background-color: transparent;
 }
 
@@ -994,4 +998,21 @@ ol ol::before {
 .cm-s-obsidian span.cm-hmd-toc {
   color: var(--text-normal);
   font-size: 16px;
+}
+
+/* _modify_outline                     */
+/*-------------------------------------*/
+
+.outline .pane-clickable-item {
+  color: var(--text-nav);
+}
+
+.outline .pane-clickable-item:hover {
+  background-color: var(--background-nav-alt);
+  color: var(--text-nav-selected);
+}
+
+.outline .pane-clickable-item .is-active {
+  background-color: var(--text-accent);
+  color: var(--text-nav-selected);
 }
