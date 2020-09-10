@@ -874,7 +874,10 @@ a.tag {
 /* Show the last note's title */
 /* modified by loikein */
 .mod-root.workspace-split.mod-vertical > div:last-child { padding-left: 28px; }
-.mod-root.workspace-split.mod-vertical > div:only-of-type { padding-left: 0 !important; }
+.mod-root.workspace-split.mod-vertical > div:only-of-type {
+    min-width: calc(100% + var(--header-width)-28px);
+    padding-left: 0 !important;
+}
 
 .mod-root .workspace-leaf-content {
   padding-left: var(--header-width);
