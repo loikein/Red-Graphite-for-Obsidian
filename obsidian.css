@@ -531,8 +531,12 @@ a.tag {
   /* this is for the double square brackets on internal links */
   display: none;
 }
-/* modified by loikein: show block code ticks */
-.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting:not(.cm-formatting-code-block), .CodeMirror-code > :not(.CodeMirror-activeline) .cm-comment, .CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-escape {
+/* modified by loikein:
+- show block code ticks
+- show list number/marker */
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting:not(.cm-formatting-code-block):not(.cm-formatting-list),
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-comment,
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-escape {
   /* this gets most formatting */
   display: none;
 }
