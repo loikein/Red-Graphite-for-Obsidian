@@ -372,8 +372,8 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
   background-color: var(--background-inline-code);
   border: 0px solid var(--border-inline-code);
   padding: 4px 4px;
-  font-weight: 600;
-  color: var(--text-inline-code);
+  /* font-weight: 600; */ /* modified by loikein */
+  color: var(--text-accent); /* modified by loikein */
 }
 
 /* Preview code block background */
@@ -419,7 +419,7 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
 /* Code block left and right padding */
 /* modified by loikein */
 .cm-s-obsidian pre.HyperMD-codeblock {
-  color: var(--text-inline-code);
+  /* color: var(--text-inline-code); */
   line-height: 1.5;
 }
 
@@ -636,8 +636,9 @@ a.tag {
 }
 /* modified by loikein:
 - show block code ticks
-- show list number/marker */
-.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting:not(.cm-formatting-code-block):not(.cm-formatting-list),
+- show list number/marker
+- show hashtag */
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting:not(.cm-formatting-code-block):not(.cm-formatting-list):not(.cm-formatting-hashtag),
 .CodeMirror-code > :not(.CodeMirror-activeline) .cm-comment,
 .CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-escape {
   /* this gets most formatting */
