@@ -503,6 +503,79 @@ a.tag {
   color: var(--text-nav-selected);
 }
 
+/* Remove the border, padding, and margin for the transcludes/embeds */
+.markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
+  border: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Hide the title of the embeds */
+.markdown-embed-title {
+  display: none;
+}
+
+/* Allow a full embed, not a partial, scrolling embed */
+.markdown-preview-view .markdown-embed-content {
+  max-height: unset;
+  overflow-y: unset;
+  padding-right: unset;
+}
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
+  max-height: unset;
+}
+
+/* Add support for [Calendar plugin](https://github.com/liamcain/obsidian-calendar-plugin) */
+#calendar-container {
+  --color-background-heading: transparent;
+
+  --color-background-day: transparent;
+  --color-background-day-empty: transparent;
+  --color-background-day-active: var(--background-nav-selected);
+  --color-background-day-hover: var(--background-nav-alt);
+
+  --color-dot: var(--text-nav);
+  --color-arrow: var(--text-nav);
+
+  --color-text-title: var(--text-faint);
+  --color-text-heading: var(--text-faint);
+  --color-text-day: var(--text-nav);
+  --color-text-today: var(--text-nav-selected);
+}
+
+/* fix graph controls */
+.workspace-split.mod-right-split .graph-controls,
+.workspace-split.mod-right-split .graph-control-section-header {
+  color: var(--text-normal-oppsite);
+  background-color: var(--background-nav);
+  --background-secondary-alt: var(--background-nav-alt);
+  --background-modifier-border: var(--background-nav-alt);
+}
+
+/* fix graph text */
+.theme-light .graph-view {
+  --text-normal:  rgb(127, 127, 127);
+}
+.theme-dark .graph-view {
+  --text-normal: rgb(127, 127, 127);
+}
+
+/* Card title adjustment for Andy Matuschak mode */
+/* modified by loikein */
+
+.workspace-leaf.mod-active .view-header {
+  border-color: var(--interactive-accent);
+}
+
+/* 
+Try to support content in the navs... this is difficult because this theme is a 
+split of dark and light. So content in the main pane should be light mode, while content
+in the left pane should be dark mode
+*/
+/* .workspace-tabs .view-content {
+  color: var(--text-nav);
+} */
+
 /* input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;

@@ -26,8 +26,7 @@
 /* source: https://github.com/seanwcom/Red-Graphite-for-Obsidian */
 /*-------------------------------------*/
 
-.theme-light
-{
+.theme-light {
   --background-inline-code: rgb(240, 240, 240);
   --background-nav-alt: rgb(58, 62, 63);
   --background-nav-file-tag: rgb(203, 77, 73);
@@ -43,7 +42,7 @@
   --interactive-accent: rgb(203, 77, 73);
   --text-accent: rgb(203, 77, 73);
   --text-faint: rgb(150, 150, 150);
-  --text-header: rgb(44, 44, 44);
+  --text-header: rgb(203, 77, 73);
   --text-highlight-bg: #b4ff0066;
   --text-inline-code: rgb(45, 45, 45);
   --text-nav-selected: rgb(255, 255, 255);
@@ -386,6 +385,7 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
   border-radius: 4px;
   white-space: pre-wrap;
   line-height: 1.0em;
+  padding: 1px 6px 1px 6px;
 }
 
 /* Unset the background and font weight from where we set it for inline code */
@@ -522,6 +522,72 @@ a.tag {
   background-color: var(--background-nav-file-tag);
   color: var(--text-nav-selected);
 }
+
+/* Remove the border, padding, and margin for the transcludes/embeds */
+.markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
+  border: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Hide the title of the embeds */
+.markdown-embed-title {
+  display: none;
+}
+
+/* Allow a full embed, not a partial, scrolling embed */
+.markdown-preview-view .markdown-embed-content {
+  max-height: unset;
+  overflow-y: unset;
+  padding-right: unset;
+}
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
+  max-height: unset;
+}
+
+/* Add support for [Calendar plugin](https://github.com/liamcain/obsidian-calendar-plugin) */
+#calendar-container {
+  --color-background-heading: transparent;
+
+  --color-background-day: transparent;
+  --color-background-day-empty: transparent;
+  --color-background-day-active: var(--background-nav-selected);
+  --color-background-day-hover: var(--background-nav-alt);
+
+  --color-dot: var(--text-nav);
+  --color-arrow: var(--text-nav);
+
+  --color-text-title: var(--text-faint);
+  --color-text-heading: var(--text-faint);
+  --color-text-day: var(--text-nav);
+  --color-text-today: var(--text-nav-selected);
+}
+
+/* fix graph controls */
+.workspace-split.mod-right-split .graph-controls,
+.workspace-split.mod-right-split .graph-control-section-header {
+  color: var(--text-normal-oppsite);
+  background-color: var(--background-nav);
+  --background-secondary-alt: var(--background-nav-alt);
+  --background-modifier-border: var(--background-nav-alt);
+}
+
+/* fix graph text */
+.theme-light .graph-view {
+  --text-normal:  rgb(127, 127, 127);
+}
+.theme-dark .graph-view {
+  --text-normal: rgb(127, 127, 127);
+}
+
+/* 
+Try to support content in the navs... this is difficult because this theme is a 
+split of dark and light. So content in the main pane should be light mode, while content
+in the left pane should be dark mode
+*/
+/* .workspace-tabs .view-content {
+  color: var(--text-nav);
+} */
 
 /* Card title adjustment for Andy Matuschak mode */
 /* modified by loikein */
@@ -1047,35 +1113,6 @@ a.tag {
 
 .view-content {
   height: 100%;
-}
-
-/* Allow a full embed, not a partial, scrolling embed */
-.markdown-preview-view .markdown-embed-content {
-  max-height: unset;
-  overflow-y: unset;
-  padding-right: unset;
-}
-
-.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
-  max-height: unset;
-}
-
-/* Add support for [Calendar plugin](https://github.com/liamcain/obsidian-calendar-plugin) */
-#calendar-container {
-  --color-background-heading: transparent;
-
-  --color-background-day: transparent;
-  --color-background-day-empty: transparent;
-  --color-background-day-active: var(--background-nav-selected);
-  --color-background-day-hover: var(--background-nav-alt);
-
-  --color-dot: var(--text-nav);
-  --color-arrow: var(--text-nav);
-
-  --color-text-title: var(--text-faint);
-  --color-text-heading: var(--text-faint);
-  --color-text-day: var(--text-nav);
-  --color-text-today: var(--text-nav-selected);
 }
 
 .workspace-fake-target-overlay {
