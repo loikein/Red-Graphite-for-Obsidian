@@ -1,0 +1,16 @@
+/* _modify_outline                     */
+/*-------------------------------------*/
+
+.outline .pane-clickable-item {
+  color: var(--text-nav);
+}
+
+.outline .pane-clickable-item:hover {
+  background-color: var(--background-nav-alt);
+  color: var(--text-nav-selected);
+}
+
+.outline .pane-clickable-item .is-active {
+  background-color: var(--text-accent);
+  color: var(--text-nav-selected);
+}

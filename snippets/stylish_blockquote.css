@@ -1,0 +1,20 @@
+/* _stylish_blockquote                 */
+/* source: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/39 */
+/*-------------------------------------*/
+
+/* Remove blockquote left margin */
+blockquote {
+  margin-inline-start: 0;
+}
+
+/* Add quotation character before quote */
+blockquote::before {
+  font: 14px/20px serif;
+  color: var(--background-modifier-border);
+  content: "“";
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+
+blockquote p { display: inline; }

@@ -1,0 +1,38 @@
+/* _tag_pillbox                        */
+/* source: https://github.com/seanwcom/Red-Graphite-for-Obsidian */
+/*-------------------------------------*/
+
+/* Tag pillbox - common settings for editor left, editor right and preview */
+.cm-s-obsidian span.cm-hashtag-begin,
+.cm-s-obsidian span.cm-hashtag-end,
+a.tag {
+  padding-bottom: 2px;
+  padding-top: 2px;
+  text-decoration: none;
+  font-family: var(--font-family-editor);
+  font-weight: bold;
+}
+
+/* Tag editor left side pillbox */
+.cm-s-obsidian span.cm-hashtag-begin {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding-left: 8px;
+}
+
+/* Tag editor right side pillbox */
+.cm-s-obsidian span.cm-hashtag-end {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding-right: 10px;
+}
+
+/* Tag preview pillbox */
+a.tag {
+  border-top-left-radius: 250px;
+  border-top-right-radius: 250px;
+  border-bottom-left-radius: 250px;
+  border-bottom-right-radius: 250px;
+  padding-left: 10px;
+  padding-right: 12px;
+}
